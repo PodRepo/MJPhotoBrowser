@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TRMJPhotoBrowser"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "The easiest lightest way to use PhotoBrowser, enhanced by ljc."
   s.homepage     = "https://github.com/PodRepo/MJPhotoBrowser.git"
   s.license      = "MIT"
@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.source       = { :git => "https://github.com/PodRepo/MJPhotoBrowser.git", :tag => s.version }
   s.source_files = "MJPhotoBrowser/MJPhotoBrowser/*.{h,m}"
+  s.private_header_files = "MJPhotoBrowser/MJPhotoBrowser/MBProgressHUD+Add.h"
   s.resource     = "MJPhotoBrowser/MJPhotoBrowser/*.bundle"
   s.requires_arc = true
 
