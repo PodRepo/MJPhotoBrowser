@@ -9,6 +9,8 @@
 #import "MJPhotoToolbar.h"
 #import "MJPhoto.h"
 
+#import <SVProgressHUD/SVProgressHUD.h>
+
 @interface MJPhotoToolbar()
 {
     // 显示页码

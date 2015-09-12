@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		037D506CD1D2D3630E5EE890 /* libPods-MJPhotoBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1203BAA4309177961BB22461 /* libPods-MJPhotoBrowser.a */; };
 		6B5C566EA0F1E3FCB2A72B1C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF6307551182D5E93801436 /* libPods.a */; };
 		7D7F322B1B0F0ADE00A010CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F322A1B0F0ADE00A010CD /* main.m */; };
 		7D7F322E1B0F0ADE00A010CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F322D1B0F0ADE00A010CD /* AppDelegate.m */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1203BAA4309177961BB22461 /* libPods-MJPhotoBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJPhotoBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61BDFDC6AFDCF8274D5596C5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7D7F32251B0F0ADE00A010CD /* MJPhotoBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJPhotoBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7F32291B0F0ADE00A010CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		7D7F326E1B0F0EB500A010CD /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		7D7F32721B0F0EDC00A010CD /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		7D7F32731B0F0EDC00A010CD /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		C00CD4471BA41A7600532C70 /* TRMJPhotoBrowser.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = TRMJPhotoBrowser.podspec; sourceTree = "<group>"; };
 		C8FF0A48B1D846F8AE8F6D19 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FBF6307551182D5E93801436 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5C566EA0F1E3FCB2A72B1C /* libPods.a in Frameworks */,
+				037D506CD1D2D3630E5EE890 /* libPods-MJPhotoBrowser.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +74,7 @@
 		7D7F321C1B0F0ADE00A010CD = {
 			isa = PBXGroup;
 			children = (
+				C00CD4471BA41A7600532C70 /* TRMJPhotoBrowser.podspec */,
 				7D7F32271B0F0ADE00A010CD /* MJPhotoBrowser */,
 				7D7F32261B0F0ADE00A010CD /* Products */,
 				B961F480196F1AC2CC8A31E6 /* Pods */,
@@ -152,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				FBF6307551182D5E93801436 /* libPods.a */,
+				1203BAA4309177961BB22461 /* libPods-MJPhotoBrowser.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -393,7 +399,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MJPhotoBrowser/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -406,7 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MJPhotoBrowser/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

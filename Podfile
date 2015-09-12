@@ -1,5 +1,6 @@
-platform :ios, '6.0'
+platform :ios, '7.0'
 
-pod 'SDWebImage'
-pod 'SVProgressHUD'
-pod 'YLGIFImage'
+pod'TRCache', '~> 0.2'
+pod 'TRWebImage', '~> 0.4'
+pod 'SVProgressHUD', '~> 1.1.3'
+pod 'YLGIFImage', '~> 0.11'

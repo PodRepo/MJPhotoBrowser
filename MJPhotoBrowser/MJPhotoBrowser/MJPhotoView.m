@@ -10,6 +10,9 @@
 #import "MJPhotoLoadingView.h"
 #import <QuartzCore/QuartzCore.h>
 
+#import <YLGIFImage/YLImageView.h>
+#import <TRWebImage/TRWebImage.h>
+
 #define ESWeak(var, weakVar) __weak __typeof(&*var) weakVar = var
 #define ESStrong_DoNotCheckNil(weakVar, _var) __typeof(&*weakVar) _var = weakVar
 #define ESStrong(weakVar, _var) ESStrong_DoNotCheckNil(weakVar, _var); if (!_var) return;
