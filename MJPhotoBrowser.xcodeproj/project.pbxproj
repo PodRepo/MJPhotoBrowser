@@ -23,6 +23,7 @@
 		7D7F32621B0F0B9100A010CD /* MJPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F325B1B0F0B9100A010CD /* MJPhotoView.m */; };
 		7D7F326F1B0F0EB500A010CD /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F326E1B0F0EB500A010CD /* CollectionViewCell.m */; };
 		7D7F32741B0F0EDC00A010CD /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F32731B0F0EDC00A010CD /* CollectionViewController.m */; };
+		C016FD811BA4237100CD0AE3 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = C016FD801BA4237100CD0AE3 /* MBProgressHUD+Add.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		7D7F32731B0F0EDC00A010CD /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		C00CD4471BA41A7600532C70 /* TRMJPhotoBrowser.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = TRMJPhotoBrowser.podspec; sourceTree = "<group>"; };
 		C016FD7E1BA4205000CD0AE3 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		C016FD7F1BA4237100CD0AE3 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		C016FD801BA4237100CD0AE3 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		C8FF0A48B1D846F8AE8F6D19 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FBF6307551182D5E93801436 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +123,8 @@
 		7D7F324E1B0F0B9100A010CD /* MJPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				C016FD7F1BA4237100CD0AE3 /* MBProgressHUD+Add.h */,
+				C016FD801BA4237100CD0AE3 /* MBProgressHUD+Add.m */,
 				7D7F324F1B0F0B9100A010CD /* MJPhoto.h */,
 				7D7F32501B0F0B9100A010CD /* MJPhoto.m */,
 				7D7F32511B0F0B9100A010CD /* MJPhotoBrowser.bundle */,
@@ -285,6 +290,7 @@
 				7D7F325C1B0F0B9100A010CD /* MJPhoto.m in Sources */,
 				7D7F322E1B0F0ADE00A010CD /* AppDelegate.m in Sources */,
 				7D7F326F1B0F0EB500A010CD /* CollectionViewCell.m in Sources */,
+				C016FD811BA4237100CD0AE3 /* MBProgressHUD+Add.m in Sources */,
 				7D7F322B1B0F0ADE00A010CD /* main.m in Sources */,
 				7D7F32621B0F0B9100A010CD /* MJPhotoView.m in Sources */,
 				7D7F32741B0F0EDC00A010CD /* CollectionViewController.m in Sources */,

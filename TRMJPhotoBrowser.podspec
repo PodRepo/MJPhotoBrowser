@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TRMJPhotoBrowser"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "The easiest lightest way to use PhotoBrowser, enhanced by ljc."
   s.homepage     = "https://github.com/PodRepo/MJPhotoBrowser.git"
   s.license      = "MIT"
@@ -16,7 +16,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency 'TRWebImage', '0.4'
-  s.dependency 'SVProgressHUD', '~> 1.1.3'
-  s.dependency 'YLGIFImage', '~> 0.11'
+  s.dependency "MBProgressHUD", "~> 0.9.1"
 
 end

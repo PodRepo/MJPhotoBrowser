@@ -4,6 +4,7 @@
 //  Created by mj on 13-3-4.
 //  Copyright (c) 2013年 itcast. All rights reserved.
 
+#import <QuartzCore/QuartzCore.h>
 #import "MJPhoto.h"
 
 @implementation MJPhoto
@@ -25,6 +26,14 @@
     if (srcImageView.clipsToBounds) {
         _capture = [self capture:srcImageView];
     }
+}
+
++(MJPhoto *)photoWithURL:(NSString *)url sourceImageView:(UIImageView *)srcImageView
+{
+    MJPhoto *photo = [MJPhoto new];
+    photo.url = [NSURL URLWithString:url];
+    photo.srcImageView = srcImageView;
+    return photo;
 }
 
 @end

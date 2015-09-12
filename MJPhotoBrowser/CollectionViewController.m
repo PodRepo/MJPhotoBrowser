@@ -9,7 +9,7 @@
 #import "CollectionViewController.h"
 #import "CollectionViewCell.h"
 #import "MJPhotoBrowser.h"
-
+#import "MJPhoto.h"
 #import <TRWebImage/TRWebImage.h>
 
 static NSString * const reuseIdentifier = @"Cell";
