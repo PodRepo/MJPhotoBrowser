@@ -29,7 +29,6 @@ PODS:
 
 DEPENDENCIES:
   - SVProgressHUD (~> 1.1.3)
-  - TRCache (~> 0.2)
   - TRWebImage (~> 0.4)
   - YLGIFImage (~> 0.11)
 

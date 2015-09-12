@@ -54,6 +54,7 @@
 		7D7F32721B0F0EDC00A010CD /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		7D7F32731B0F0EDC00A010CD /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		C00CD4471BA41A7600532C70 /* TRMJPhotoBrowser.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = TRMJPhotoBrowser.podspec; sourceTree = "<group>"; };
+		C016FD7E1BA4205000CD0AE3 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		C8FF0A48B1D846F8AE8F6D19 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FBF6307551182D5E93801436 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -75,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				C00CD4471BA41A7600532C70 /* TRMJPhotoBrowser.podspec */,
+				C016FD7E1BA4205000CD0AE3 /* LICENSE.txt */,
 				7D7F32271B0F0ADE00A010CD /* MJPhotoBrowser */,
 				7D7F32261B0F0ADE00A010CD /* Products */,
 				B961F480196F1AC2CC8A31E6 /* Pods */,
