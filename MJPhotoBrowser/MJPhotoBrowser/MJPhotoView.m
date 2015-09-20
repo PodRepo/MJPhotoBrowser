@@ -17,6 +17,8 @@
     BOOL _doubleTap;
     UIImageView *_imageView;
     MJPhotoLoadingView *_photoLoadingView;
+    
+    BOOL _showByFading;
 }
 @end
 
@@ -58,7 +60,7 @@
 #pragma mark - photoSetter
 - (void)setPhoto:(MJPhoto *)photo {
     _photo = photo;
-    
+    _showByFading = photo.isShowByFading;
     [self showImage];
 }
 
@@ -181,14 +183,26 @@
     if (_photo.firstShow) { // 第一次显示的图片
         _photo.firstShow = NO; // 已经显示过了
         _imageView.frame = [_photo.srcImageView convertRect:_photo.srcImageView.bounds toView:nil];
-        
-        [UIView animateWithDuration:0.3 animations:^{
+        if (!_showByFading) {
+            [UIView animateWithDuration:0.3 animations:^{
+                _imageView.frame = imageFrame;
+            } completion:^(BOOL finished) {
+                // 设置底部的小图片
+                _photo.srcImageView.image = _photo.placeholder;
+                [self photoStartLoad];
+            }];
+
+        }else{
             _imageView.frame = imageFrame;
-        } completion:^(BOOL finished) {
-            // 设置底部的小图片
-            _photo.srcImageView.image = _photo.placeholder;
-            [self photoStartLoad];
-        }];
+            _imageView.alpha = 0.0;
+            [UIView animateWithDuration:0.3 animations:^{
+                _imageView.alpha = 1.0;
+            } completion:^(BOOL finished) {
+                // 设置底部的小图片
+                _photo.srcImageView.image = _photo.placeholder;
+                [self photoStartLoad];
+            }];
+        }
     } else {
         _imageView.frame = imageFrame;
     }
@@ -227,31 +241,59 @@
     _photo.srcImageView.image = nil;
     
     CGFloat duration = 0.15;
-    if (_photo.srcImageView.clipsToBounds) {
-        [self performSelector:@selector(reset) withObject:nil afterDelay:duration];
-    }
-    
-    [UIView animateWithDuration:duration + 0.1 animations:^{
-        _imageView.frame = [_photo.srcImageView convertRect:_photo.srcImageView.bounds toView:nil];
-        
-        // gif图片仅显示第0张
-        if (_imageView.image.images) {
-            _imageView.image = _imageView.image.images[0];
+    // change hide
+    if (!_showByFading) {
+        if (_photo.srcImageView.clipsToBounds) {
+            [self performSelector:@selector(reset) withObject:nil afterDelay:duration];
         }
+        [UIView animateWithDuration:duration + 0.1 animations:^{
+            _imageView.frame = [_photo.srcImageView convertRect:_photo.srcImageView.bounds toView:nil];
+            
+            // gif图片仅显示第0张
+            if (_imageView.image.images) {
+                _imageView.image = _imageView.image.images[0];
+            }
+            
+            // 通知代理
+            if ([self.photoViewDelegate respondsToSelector:@selector(photoViewSingleTap:)]) {
+                [self.photoViewDelegate photoViewSingleTap:self];
+            }
+        } completion:^(BOOL finished) {
+            // 设置底部的小图片
+            _photo.srcImageView.image = _photo.placeholder;
+            
+            // 通知代理
+            if ([self.photoViewDelegate respondsToSelector:@selector(photoViewDidEndZoom:)]) {
+                [self.photoViewDelegate photoViewDidEndZoom:self];
+            }
+        }];
+
+    }else{
         
-        // 通知代理
-        if ([self.photoViewDelegate respondsToSelector:@selector(photoViewSingleTap:)]) {
-            [self.photoViewDelegate photoViewSingleTap:self];
-        }
-    } completion:^(BOOL finished) {
-        // 设置底部的小图片
         _photo.srcImageView.image = _photo.placeholder;
-        
-        // 通知代理
-        if ([self.photoViewDelegate respondsToSelector:@selector(photoViewDidEndZoom:)]) {
-            [self.photoViewDelegate photoViewDidEndZoom:self];
-        }
-    }];
+        _imageView.alpha = 1.0;
+        [UIView animateWithDuration:duration + 0.1 animations:^{
+            _imageView.alpha = 0.0;
+            
+            // gif图片仅显示第0张
+            if (_imageView.image.images) {
+                _imageView.image = _imageView.image.images[0];
+            }
+            
+            // 通知代理
+            if ([self.photoViewDelegate respondsToSelector:@selector(photoViewSingleTap:)]) {
+                [self.photoViewDelegate photoViewSingleTap:self];
+            }
+        } completion:^(BOOL finished) {
+            // 设置底部的小图片
+//            _photo.srcImageView.image = _photo.placeholder;
+            
+            // 通知代理
+            if ([self.photoViewDelegate respondsToSelector:@selector(photoViewDidEndZoom:)]) {
+                [self.photoViewDelegate photoViewDidEndZoom:self];
+            }
+        }];
+    }
 }
 
 - (void)reset

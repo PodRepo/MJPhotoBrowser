@@ -21,5 +21,8 @@
 @property (nonatomic, assign) BOOL save;
 @property (nonatomic, assign) int index; // 索引
 
+// 显示方式。 默认是从srcImageView 动画到全屏。 isShowByFading是直接淡入全屏
+@property (nonatomic, assign) BOOL isShowByFading;
+
 +(MJPhoto *)photoWithURL:(NSString *)url sourceImageView:(UIImageView *)srcImageView;
 @end

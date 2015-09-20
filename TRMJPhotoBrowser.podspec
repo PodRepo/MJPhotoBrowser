@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TRMJPhotoBrowser"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "The easiest lightest way to use PhotoBrowser, enhanced by ljc."
   s.homepage     = "https://github.com/PodRepo/MJPhotoBrowser.git"
   s.license      = "MIT"

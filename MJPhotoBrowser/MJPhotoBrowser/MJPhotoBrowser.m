@@ -60,6 +60,16 @@
 {
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [window addSubview:self.view];
+    
+    if (((MJPhoto *)self.photos[0]).isShowByFading) {
+        self.view.alpha = 0;
+        [UIView animateWithDuration:0.3 animations:^{
+            self.view.alpha = 1;
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
+    
     [window.rootViewController addChildViewController:self];
 
     if (_currentPhotoIndex == 0) {

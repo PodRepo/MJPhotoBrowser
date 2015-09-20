@@ -20,4 +20,6 @@
 @property (nonatomic, strong) MJPhoto *photo;
 // 代理
 @property (nonatomic, weak) id<MJPhotoViewDelegate> photoViewDelegate;
+
+
 @end
